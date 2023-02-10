@@ -30,6 +30,7 @@ SECRET_KEY = 'django-insecure-2yt0mvuc3-y_t!5ae!8%rvavtha(i$m7&i*2bq&bez^#i79g05
 DEBUG = True
 
 ALLOWED_HOSTS = []
+LOGIN_URL = 'rango:login'
 
 
 # Application definition
@@ -105,6 +106,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+PASSWORD_HASHERS = (
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+)
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
